@@ -25,7 +25,12 @@ An open-source desktop client for Only2004 using Electron.
 - Node.js
 - JavaScript
 
-
+## Controls
+Zoom(-): [Ctrl+(-)]
+---
+Zoom(+): [Ctrl+Shft+(+)]
+---
+Reload: [Ctrl+R]
 ---
 
 ### **`LICENSE`** (MIT License)
