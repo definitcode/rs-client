@@ -1,0 +1,45 @@
+{
+  "name": "rs-client",
+  "version": "1.0.0",
+  "description": "Only2004 Desktop Client",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
+  "build": {
+    "appId": "com.only2004.client",
+    "productName": "only2004",
+    "files": [
+      "main.js",
+      "preload.js",
+      "assets/**",
+      "extension/**",
+      "plugins/**"
+    ],
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "mac": {
+      "category": "public.app-category.games"
+    },
+    "linux": {
+      "target": ["AppImage"]
+    }
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3"
+  }
+}

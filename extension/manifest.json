@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Only2004 Enhancer",
+  "version": "1.0.0",
+  "description": "Enhancements for the Only2004 desktop client.",
+  "host_permissions": ["https://only2004.com/*"],
+  "permissions": ["storage", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+"icons": {
+    "48": "icon.ico"
+  },
+  "content_scripts": [{
+    "matches": ["https://only2004.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_start"
+  }]
+}
